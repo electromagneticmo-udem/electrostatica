@@ -53,6 +53,7 @@ class ElectricField:
                 r_i = self.particleSystem.particles[idP].pos.coords
                 d_i = r - r_i
                 electricField += (q_i/LA.norm(d_i)**3)*d_i
+            electricField = self.ke*electricField
             return electricField
 
 if __name__ == "__main__":
